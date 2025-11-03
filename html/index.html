@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Davies Restaurant — Seasonal, Local, Exceptional</title>
+    <meta
+      name="description"
+      content="Davies Restaurant — an intimate dining experience featuring seasonal plates, locally sourced ingredients, and warm, attentive service. Reserve a table today."
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <h1 class="logo">Davies Restaurant</h1>
+        <nav class="main-nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="reservation.html">Reservation</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-inner container">
+          <h2 id="hero-heading">Seasonal Flavors. Timeless Hospitality.</h2>
+          <p class="lead">
+            At Davies Restaurant we craft thoughtful dishes from the freshest
+            local ingredients — inspired by the season, perfected by our chef.
+          </p>
+          <p>
+            <a class="btn btn-primary" href="reservation.html"
+              >Reserve a Table</a
+            >
+            <a class="btn btn-outline" href="menu.html">View Our Menu</a>
+          </p>
+        </div>
+      </section>
+
+      <section class="about container">
+        <h3 id="about-heading">An approachable, elevated dining experience</h3>
+        <p>
+          Davies Restaurant blends seasonal creativity with approachable
+          flavors. We partner with nearby farms and fisheries to build a menu
+          that changes with the harvest. Whether you're celebrating a special
+          evening or stopping by for a relaxed night out, our team ensures a
+          memorable meal with thoughtful service and a welcoming atmosphere.
+        </p>
+      </section>
+
+      <section class="featured container">
+        <h3 id="featured-heading">Chef's Highlights</h3>
+        <ul class="featured-list">
+          <li class="dish">
+            <img
+              src="../images/jollof.png"
+              alt="Classic Ghanaian Jollof Rice with plantain and grilled protein"
+              class="dish-img"
+            />
+            <h4>Signature Jollof Rice</h4>
+            <p>
+              Fragrant long-grain rice simmered in spiced tomato blend, served
+              with caramelized plantain and your choice of grilled chicken or
+              fish — smoky, vibrant, and fully Ghanaian.
+            </p>
+          </li>
+          <li class="dish">
+            <img
+              src="../images/banku.png"
+              alt="Banku with grilled tilapia and pepper sauce"
+              class="dish-img"
+            />
+            <h4>Banku & Grilled Tilapia</h4>
+            <p>
+              Traditional fermented corn and cassava dumpling, paired with whole
+              grilled tilapia and house shito — hearty, tangy, and bold.
+            </p>
+          </li>
+          <li class="dish">
+            <img
+              src="../images/kelewele.png"
+              alt="Spicy fried plantain (Kelewele)"
+              class="dish-img"
+            />
+            <h4>Kelewele</h4>
+            <p>
+              Sweet ripe plantain cubes tossed in ginger, chili and warm spices,
+              fried until crisp — a favorite snack and dessert.
+            </p>
+          </li>
+        </ul>
+      </section>
+
+      <section class="chef container">
+        <h3 id="chef-heading">From our Chef</h3>
+        <div class="chef-note">
+          <img
+            src="../images/chef.jpg"
+            alt="Head chef portrait"
+            class="chef-img"
+          />
+          <blockquote>
+            "Our approach is simple: source the best local ingredients, respect
+            their natural flavors, and serve them with care. Every plate
+            reflects the season and a dedication to craft." — Chef Davidica
+            Asare
+          </blockquote>
+        </div>
+      </section>
+
+      <section class="reservation-cta container">
+        <h3 id="reserve-heading">Book your table</h3>
+        <p>
+          Reserve online or give us a call. We accommodate dietary needs and
+          small private events—contact us to discuss arrangements.
+        </p>
+        <p>
+          <a class="btn btn-primary" href="reservation.html">Reserve Now</a>
+          <a href="tel:+233244796837" class="phone">Call: +233 244 796 837</a>
+        </p>
+      </section>
+
+      <section class="hours-location container">
+        <h3 id="hours-heading">Hours & Location</h3>
+        <div class="grid">
+          <div>
+            <h4>Hours</h4>
+            <ul>
+              <li>Mon-Thu: 5:00 PM — 10:00 PM</li>
+              <li>Fri-Sat: 5:00 PM — 11:00 PM</li>
+              <li>Sun: 4:00 PM — 9:00 PM</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Location</h4>
+            <address>
+              KO/102 Obonoma <br />
+              Kwabrafoso
+            </address>
+          </div>
+        </div>
+      </section>
+
+      <section class="reviews container">
+        <h3 id="reviews-heading">What people are saying</h3>
+        <ul class="testimonials">
+          <li>
+            "An unforgettable meal — thoughtful flavors and warm service."
+            <strong>— The Food & Wine Guide</strong>
+          </li>
+          <li>
+            "A neighborhood gem. The seasonal menu keeps us coming back."
+            <strong>— Maria R.</strong>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p class="footer-copy">
+          Davies Restaurant — Seasonally inspired dining. &copy;
+          <span id="year"></span> Davies Restaurant.
+        </p>
+        <p class="social">
+          WhatsApp Us: <a href="tel:+233244796837">+233 244 796 837</a>
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      (function () {
+        var year = new Date().getFullYear();
+        var setyear = document.getElementById("year");
+        if (setyear) setyear.textContent = year;
+      })();
+    </script>
+  </body>
+</html>
