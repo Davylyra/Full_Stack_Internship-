@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Davies Restaurant — Reservation</title>
+    <meta
+      name="description"
+      content="Request a reservation at Davies Restaurant. Call or submit the form and we'll confirm availability."
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <h1 class="logo">Davies Restaurant</h1>
+        <nav class="main-nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="reservation.html">Reservation</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <h2>Reserve a table</h2>
+      <p>
+        Please fill out the form below or call us at
+        <a href="tel:+233244796837">(+233) 244-796-837</a>.
+      </p>
+
+      <form
+        class="reservation-form"
+        onsubmit="alert('Thank you, we have received your request and will contact you to confirm.');reset();"
+      >
+        <div class="form-row">
+          <div class="col">
+            <label for="name">Full name</label>
+            <input id="name" name="name" type="text" required />
+          </div>
+          <div class="col col--narrow">
+            <label for="party">Party size</label>
+            <select id="party" name="party">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+              <option>6+</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row spaced">
+          <div class="col">
+            <label for="date">Date</label>
+            <input id="date" name="date" type="date" required />
+          </div>
+          <div class="col col--narrow">
+            <label for="time">Time</label>
+            <input id="time" name="time" type="time" required />
+          </div>
+        </div>
+
+        <div class="spaced">
+          <label for="notes">Notes or dietary requirements</label>
+          <textarea
+            id="notes"
+            name="notes"
+            rows="4"
+            placeholder="Let us know about allergies or special requests"
+          ></textarea>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary">
+            Request Reservation
+          </button>
+        </div>
+      </form>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p class="footer-copy">
+          Davies Restaurant — Seasonally inspired dining. &copy;
+          <span id="year"></span> Davies Restaurant.
+        </p>
+        <p class="social">
+          WhatApp Us : <a href="tel:+233244796837">+233244796837</a>
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      (function () {
+        var year = new Date().getFullYear();
+        var setyear = document.getElementById("year");
+        if (setyear) setyear.textContent = year;
+      })();
+    </script>
+  </body>
+</html>

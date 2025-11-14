@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Davies Restaurant — Menu</title>
+    <meta
+      name="description"
+      content="Menu highlights from Davies Restaurant — seasonal small plates, mains and desserts."
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <h1 class="logo">Davies Restaurant</h1>
+        <nav class="main-nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="reservation.html">Reservation</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="menu container" aria-labelledby="menu-heading">
+        <div class="menu-header">
+          <h2 id="menu-heading">Our Menu</h2>
+          <p class="muted">
+            A selection of current highlights — updated Nov 1, 2025
+          </p>
+        </div>
+
+        <div class="menu-content">
+          <h3>Starters & Snacks</h3>
+          <ul>
+            <li>
+              <img
+                src="../images/kelewele.png"
+                alt="Kelewele - spicy fried plantain"
+                class="menu-thumb"
+              />
+              <div>
+                <span class="dish">Kelewele</span>
+                
+                <div class="desc">
+                  Spicy ginger & chili tossed plantain cubes
+                </div>
+              </div>
+              <span class="price">6</span>
+            </li>
+            <li>
+              <img
+                src="../images/beef.png"
+                alt="Chinchinga skewers"
+                class="menu-thumb"
+              />
+              <div>
+                <span class="dish">Chinchinga (Beef Kebab)</span>
+                <div class="desc">
+                  Grilled spiced beef skewers served with pepper dip
+                </div>
+              </div>
+              <span class="price">10</span>
+            </li>
+          </ul>
+
+          <h3>Mains</h3>
+          <ul>
+            <li>
+              <img
+                src="../images/jollof.png"
+                alt="Jollof Rice"
+                class="menu-thumb"
+              />
+              <div>
+                <span class="dish">Jollof Rice with Chicken</span>
+                <div class="desc">
+                  Tomato-spiced rice, served with grilled chicken and plantain
+                </div>
+              </div>
+              <span class="price">18</span>
+            </li>
+            <li>
+              <img
+                src="../images/banku.png"
+                alt="Banku and tilapia"
+                class="menu-thumb"
+              />
+              <div>
+                <span class="dish">Banku & Grilled Tilapia</span>
+                <div class="desc">
+                  Fermented corn-cassava dumpling with whole grilled tilapia and
+                  shito
+                </div>
+              </div>
+              <span class="price">22</span>
+            </li>
+            <li>
+              <img
+                src="../images/red.png"
+                alt="Red Red (bean stew)"
+                class="menu-thumb"
+              />
+              <div>
+                <span class="dish">Red Red</span>
+          
+                <div class="desc">
+                  Slow-cooked black-eyed peas in palm oil, served with fried
+                  plantain
+                </div>
+              </div>
+              <span class="price">16</span>
+            </li>
+            <li>
+              <img
+                src="../images/fufu.png"
+                alt="Fufu and Light Soup"
+                class="menu-thumb"
+              />
+              <div>
+                <span class="dish">Fufu & Light Soup</span>
+                <div class="desc">
+                  Pounded cassava and plantain served with a flavorful light
+                  soup (choice of goat or fish)
+                </div>
+              </div>
+              <span class="price">20</span>
+            </li>
+          </ul>
+
+          <h3>Desserts & Beverages</h3>
+          <ul>
+            <li>
+              <img
+                src="../images/bofrot.png"
+                alt="Bofrot (Ghanaian doughnut)"
+                class="menu-thumb"
+              />
+              <div>
+                <span class="dish">Bofrot</span>
+                <div class="desc">
+                  Sweet fried dough balls — warm and comforting
+                </div>
+              </div>
+              <span class="price">5</span>
+            </li>
+            <li>
+              <img
+                src="../images/sobolo.png"
+                alt="Sobolo (hibiscus drink)"
+                class="menu-thumb"
+              />
+              <div>
+                <span class="dish">Sobolo</span>
+                <div class="desc">
+                  Refreshing hibiscus and ginger iced drink
+                </div>
+              </div>
+              <span class="price">4</span>
+            </li>
+            <li>
+              <img
+                src="../images/bites.png"
+                alt="Kelewele (dessert)"
+                class="menu-thumb"
+              />
+              <div>
+                <span class="dish">Kelewele Bites</span>
+                <div class="desc">
+                  Sweet-spicy plantain with toasted coconut
+                </div>
+              </div>
+              <span class="price">6</span>
+            </li>
+          </ul>
+        </div>
+
+        <p class="menu-note muted">
+          * Prices in GHS. Menu items may change based on seasonal availability.
+        </p>
+        
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p class="footer-copy">
+          Davies Restaurant — Seasonally inspired dining. &copy;
+          <span id="year"></span> Davies Restaurant.
+        </p>
+        <p class="social">
+          WhatsApp Us: <a href="tel:+233244796837">+233 244 796 837</a>
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      (function () {
+        var year = new Date().getFullYear();
+        var setyear = document.getElementById("year");
+        if (setyear) setyear.textContent = year;
+      })();
+    </script>
+  </body>
+</html>

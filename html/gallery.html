@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Davies Restaurant — Gallery</title>
+    <meta
+      name="description"
+      content="Explore our culinary journey through images of our signature Ghanaian dishes, elegant dining space, and warm atmosphere at Davies Restaurant."
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <h1 class="logo">Davies Restaurant</h1>
+        <nav class="main-nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="reservation.html">Reservation</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="gallery-intro container">
+        <h2>Our Culinary Journey</h2>
+        <p class="lead">
+          Experience Davies Restaurant through our carefully crafted dishes and
+          warm, inviting atmosphere.
+        </p>
+      </section>
+
+      <section class="gallery-section container">
+        <h3>Our Space</h3>
+        <div class="gallery">
+          <figure class="gallery-item">
+            <img
+              src="../images/room.jpg"
+              alt="Our elegant main dining room with warm lighting and comfortable seating"
+            />
+            <figcaption>Main Dining Room</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img
+              src="../images/dinning.png"
+              alt="Guests dining at a table while servers bring plates and pour drinks"
+            />
+            <figcaption>Dining & Service</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="gallery-section container">
+        <h3>Signature Dishes</h3>
+        <div class="gallery">
+          <figure class="gallery-item">
+            <img
+              src="../images/jollof.png"
+              alt="Signature Jollof Rice with grilled chicken and plantain"
+            />
+            <figcaption>Signature Jollof Rice</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img
+              src="../images/banku.png"
+              alt="Banku served with grilled tilapia and pepper sauce"
+            />
+            <figcaption>Banku & Grilled Tilapia</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img
+              src="../images/kelewele.png"
+              alt="Kelewele - spicy fried plantain"
+            />
+            <figcaption>Kelewele</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="gallery-cta">
+        <div class="container">
+          <div class="cta-content">
+            <h3>Experience Davies Restaurant</h3>
+            <p class="cta-lead">
+              Join us for an unforgettable dining experience
+            </p>
+            <p class="cta-details">Open daily for dinner service</p>
+            <ul class="cta-hours">
+              <li>Mon-Thu: 5:00 PM — 10:00 PM</li>
+              <li>Fri-Sat: 5:00 PM — 11:00 PM</li>
+              <li>Sun: 4:00 PM — 9:00 PM</li>
+            </ul>
+            <div class="cta-actions">
+              <a href="reservation.html" class="btn btn-primary"
+                >Reserve Your Table</a
+              >
+              <span class="cta-or">or</span>
+              <a href="tel:+233244796837" class="btn btn-outline"
+                >Call (+233) 244-796-837</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p class="footer-copy">
+          Davies Restaurant — Seasonally inspired dining. &copy;
+          <span id="year"></span> Davies Restaurant.
+        </p>
+        <p class="social">
+          WhatsApp Us: <a href="tel:+233244796837">+233 244 796 837</a>
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      (function () {
+        var year = new Date().getFullYear();
+        var setyear = document.getElementById("year");
+        if (setyear) setyear.textContent = year;
+      })();
+    </script>
+  </body>
+</html>
