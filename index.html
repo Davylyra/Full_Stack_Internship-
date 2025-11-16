@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Public Scheme Registration</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navbar-container">
+        <div class="navbar-brand">
+          <h1>🏛️ Public Scheme Registration</h1>
+        </div>
+        <ul class="navbar-menu">
+          <li><a href="home.html" class="navbar-link">Home</a></li>
+          <li><a href="#apply" class="navbar-link">Apply</a></li>
+          <li><a href="#status" class="navbar-link">Check Status</a></li>
+          <li><a href="#admin" class="navbar-link">Admin</a></li>
+        </ul>
+        <div class="navbar-toggle">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      <section id="home">
+        <h1>🏛️ Apply for Government Schemes</h1>
+      </section>
+
+      <section id="apply">
+        <div class="card">
+          <h2>📝 New Application</h2>
+        <form id="applyForm">
+          <div class="form-group">
+            <label
+              for="scheme"
+              style="display: block; margin-bottom: 5px; font-weight: 500"
+              >Select Scheme</label
+            >
+            <select id="scheme" required>
+              <option value="">Select a Scheme</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <input type="text" id="name" placeholder="Full Name" required />
+          </div>
+          <div class="form-group">
+            <input
+              type="email"
+              id="email"
+              placeholder="Email Address"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <input type="tel" id="phone" placeholder="Phone Number" required />
+          </div>
+          <button type="submit">🚀 Submit Application</button>
+        </form>
+        <p id="msg"></p>
+      </div>
+
+      <hr />
+
+      <section id="status">
+        <div class="card">
+          <h2>🔍 Check Application Status</h2>
+        <form id="statusCheckForm">
+          <div class="form-group">
+            <input
+              type="number"
+              id="appId"
+              placeholder="Enter Application ID"
+              required
+            />
+          </div>
+          <button type="submit">🔍 Check Status</button>
+        </form>
+        <div id="statusResult"></div>
+      </div>
+
+      <hr />
+
+      <section id="admin">
+        <div id="adminLogin" class="card">
+          <h2>🔐 Admin Login</h2>
+        <form id="loginForm">
+          <div class="form-group">
+            <input type="text" id="username" placeholder="Username" required />
+          </div>
+          <div class="form-group">
+            <input
+              type="password"
+              id="password"
+              placeholder="Password"
+              required
+            />
+          </div>
+          <button type="submit">🔑 Log In</button>
+        </form>
+        <p id="loginMsg"></p>
+      </div>
+
+      <div id="adminPanel" style="display: none">
+        <div class="card">
+          <h2>⚙️ Admin Panel</h2>
+          <button onclick="logout()" class="logout-btn">🚪 Log Out</button>
+          <table id="adminTable">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Scheme</th>
+                <th>Status</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <script src="apply.js"></script>
+  </body>
+</html>
