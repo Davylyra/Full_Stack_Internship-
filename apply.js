@@ -156,4 +156,6 @@ function logout() {
     adminToken = null;
     localStorage.removeItem('adminToken');
     checkAdminSession();
+    document.getElementById('loginForm').reset();
+    document.getElementById('loginMsg').textContent = '';
 }
