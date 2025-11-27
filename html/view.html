@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>View All GDP Records</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="container nav-container">
+        <a href="/html/index.html" class="btn btn-primary nav-link">Back to Home</a>
+      </div>
+    </nav>
+
+    <div class="container top-spacing">
+      <header>
+        <h1>All GDP Records</h1>
+        <p></p>
+      </header>
+
+      <!-- Notification Message Box -->
+      <div id="message-box" class="hidden" role="alert">
+        <div id="message-text" class="text-center font-medium"></div>
+      </div>
+
+      <main>
+        <div class="card" id="records-section">
+          <h2>GDP Records Database</h2>
+          <p></p><br>
+          <div class="table-wrapper">
+            <table border="1">
+              <thead>
+                <tr>
+                  <th>Country</th>
+                  <th>Year</th>
+                  <th class="text-right">GDP Value</th>
+                  <th class="text-right">Population</th>
+                  <th class="text-right">GDP Per Capita</th>
+                  <th>Unit</th>
+                  <th class="text-center">Actions</th>
+                </tr>
+              </thead>
+              <tbody id="gdp-table-body">
+                <tr>
+                  <td colspan="7" class="text-center">Loading records...</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <!-- Edit Modal -->
+    <div id="edit-modal" class="modal hidden">
+      <div class="modal-content">
+        <span id="modal-close" class="modal-close">&times;</span>
+        <h2>Edit GDP Record</h2>
+        <form id="edit-form">
+          <input type="hidden" id="edit-record-id" />
+          <div class="form-group">
+            <label for="edit-country">Country Name</label>
+            <input type="text" id="edit-country" required />
+          </div>
+          <div class="form-group">
+            <label for="edit-year">Year</label>
+            <input type="number" id="edit-year" required min="1900" max="2100" />
+          </div>
+          <div class="form-group">
+            <label for="edit-gdp-value">GDP Value (In billions)</label>
+            <input type="number" id="edit-gdp-value" required step="0.01" />
+          </div>
+          <div class="form-group">
+            <label for="edit-population">Population</label>
+            <input type="number" id="edit-population" required />
+          </div>
+          <div class="form-group">
+            <label for="edit-unit">Unit</label>
+            <select id="edit-unit" required>
+             <option value="USD billions">USD billions</option>
+                <option value="Local Currency billions">Local Currency billions</option>
+                <option value="USD millions">USD millions</option>
+                <option value="Local Currency millions">Local Currency millions</option>
+                <option value="USD trillions">USD trillions</option>
+                <option value="Local Currency trillions">Local Currency trillions</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary">Save Changes</button>
+          <button type="button" id="modal-cancel" class="btn btn-secondary">Cancel</button>
+        </form>
+      </div>
+    </div>
+    <script src="/js/view.js"></script>
+  </body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Country GDP Records Manager</title>
+    <link rel="stylesheet" href="/css/style.css" />
+
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="container nav-container">
+        <a href="/html/view.html" class="btn btn-primary nav-link">View Records</a>
+      </div>
+    </nav>
+
+    <div class="container top-spacing">
+      <header>
+        <h1>Country GDP Records</h1>
+        <p>Manage GDP data for countries worldwide</p>
+      </header>
+
+      <!-- Notification Message Box -->
+      <div id="message-box" class="hidden" role="alert">
+        <div id="message-text" class="text-center font-medium"></div>
+      </div>
+
+      <main class="main-grid">
+        <div class="card form-card">
+          <h2 id="form-title">Add New GDP Record</h2>
+          <form id="gdp-form">
+            <input type="hidden" id="record-id" value="" />
+
+            <div class="form-group">
+              <label for="country">Country Name</label>
+              <input
+                type="text"
+                id="country"
+                required
+                placeholder="e.g., Ghana"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="year">Year</label>
+              <input
+                type="number"
+                id="year"
+                required
+                placeholder="e.g., 2024"
+                min="1900"
+                max="2100"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="gdp-value">GDP Value (In billions)</label>
+              <input
+                type="number"
+                id="gdp-value"
+                required
+                step="0.01"
+                placeholder="e.g., 3700 (for $3.7 Trillion)"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="population">Population</label>
+              <input
+                type="number"
+                id="population"
+                required
+                placeholder="e.g., 1380004385"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="gdp-per-capita">GDP Per Capita (Auto-calculated)</label>
+              <input
+                type="text"
+                id="gdp-per-capita"
+                readonly
+                placeholder="Auto calculated"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="unit">Unit</label>
+              <select id="unit" required>
+                <option value="USD billions">USD billions</option>
+                <option value="Local Currency billions">Local Currency billions</option>
+                <option value="USD millions">USD millions</option>
+                <option value="Local Currency millions">Local Currency millions</option>
+                <option value="USD trillions">USD trillions</option>
+                <option value="Local Currency trillions">Local Currency trillions</option>
+              </select>
+            </div>
+
+            <button type="submit" id="submit-button" class="btn btn-primary">
+              Add Record
+            </button>
+          </form>
+        </div>
+      </main>
+    </div>
+
+    <script src="/js/add.js"></script>
+  </body>
+</html>
