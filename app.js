@@ -150,7 +150,7 @@ function AdminDashboard({ onLogout }) {
                 <button className="logout-btn" onClick={handleLogout}>Logout</button>
             </div>
 
-            {/* Statistics */}
+            //Statistics 
             <div className="stats-container">
                 <div className="stat-card">
                     <div className="stat-value">{total}</div>
@@ -167,7 +167,7 @@ function AdminDashboard({ onLogout }) {
                 ))}
             </div>
 
-            {/* Filters */}
+            // Filters 
             <div className="filter-container">
                 <label>Filter by Type:</label>
                 <select value={filterType} onChange={(e) => setFilterType(e.target.value)}>
@@ -179,7 +179,7 @@ function AdminDashboard({ onLogout }) {
                 <button className="refresh-btn" onClick={() => fetchFeedback(filterType)}>Refresh</button>
             </div>
 
-            {/* Feedback List */}
+            //Feedback List 
             {loading ? (
                 <div className="loading-message">Loading feedback...</div>
             ) : error ? (
@@ -234,7 +234,7 @@ function AdminDashboard({ onLogout }) {
     );
 }
 
-// Feedback System Component (existing)
+// Feedback System Component 
 function FeedbackSystem() {
     const [activeTab, setActiveTab] = useState('nps');
     const [npsScore, setNpsScore] = useState(null);
@@ -392,7 +392,7 @@ function FeedbackSystem() {
                     </div>
                 </div>
 
-                {/* Product Review Form */}
+                // Product Review Form 
                 <div className={`form-section ${activeTab === 'review' ? 'active' : ''}`}>
                     <div className="form-group">
                         <label htmlFor="product-id">Product ID or Name</label>
@@ -419,7 +419,7 @@ function FeedbackSystem() {
                     </div>
                 </div>
 
-                {/* Sentiment Form */}
+                //Sentiment Form 
                 <div className={`form-section ${activeTab === 'sentiment' ? 'active' : ''}`}>
                     <div className="form-group">
                         <label>How are you feeling about our service?</label>
@@ -483,7 +483,7 @@ function App() {
 
     return (
         <div>
-            {/* Navigation */}
+            //Navigation
             <div className="main-navigation">
                 <button
                     className={`nav-btn ${view === 'feedback' ? 'active' : ''}`}
@@ -505,7 +505,7 @@ function App() {
                 </button>
             </div>
 
-            {/* Content */}
+            // Content 
             {view === 'feedback' && <FeedbackSystem />}
             {view === 'admin-login' && <AdminLogin onLogin={handleAdminLogin} />}
             {view === 'admin' && isAuthenticated && <AdminDashboard onLogout={handleAdminLogout} />}
