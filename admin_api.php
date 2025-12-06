@@ -1,5 +1,5 @@
 <?php
-// Start session before any output
+
 session_start();
 
 
@@ -53,7 +53,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 
     // Get feedback data
     try {
-        // Get filter parameters
+        
         $feedback_type = isset($_GET['type']) ? $conn->real_escape_string($_GET['type']) : null;
         $limit = isset($_GET['limit']) ? (int) $_GET['limit'] : 100;
         $offset = isset($_GET['offset']) ? (int) $_GET['offset'] : 0;
@@ -62,7 +62,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
         $checkColumn = $conn->query("SHOW COLUMNS FROM customer_feedback LIKE 'created_at'");
         $hasCreatedAt = $checkColumn->num_rows > 0;
 
-        // Build query
+        
         $query = "SELECT id, feedback_type, score, sentiment, comment, product_id";
         if ($hasCreatedAt) {
             $query .= ", created_at";
