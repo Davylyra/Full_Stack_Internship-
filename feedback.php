@@ -29,11 +29,10 @@ $sentiment = isset($data->sentiment) ? $conn->real_escape_string($data->sentimen
 $comment = isset($data->comment) ? $conn->real_escape_string($data->comment) : NULL;
 $product_id = isset($data->product_id) ? $conn->real_escape_string($data->product_id) : NULL;
 
-// Use prepared statements to prevent SQL injection
+
 $stmt = $conn->prepare("INSERT INTO customer_feedback (feedback_type, score, sentiment, comment, product_id) VALUES (?, ?, ?, ?, ?)");
 
 // Bind parameters
-// "issss" means Integer, String, String, String, String
 $stmt->bind_param("sisss", $feedback_type, $score, $sentiment, $comment, $product_id);
 
 // Execute the statement
